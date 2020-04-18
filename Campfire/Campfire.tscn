@@ -2,8 +2,7 @@
 
 [ext_resource path="res://Campfire/Assets/FlameParticle.png" type="Texture" id=1]
 [ext_resource path="res://Campfire/Assets/campfire.png" type="Texture" id=2]
-[ext_resource path="res://Campfire/Heat.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Campfire/Campfire.gd" type="Script" id=4]
+[ext_resource path="res://Campfire/Heat.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 33.5954, 52.3368 )
@@ -47,7 +46,6 @@ position = Vector2( 188.706, 48.8031 )
 scale = Vector2( 3, 3 )
 collision_layer = 8
 collision_mask = 20
-script = ExtResource( 4 )
 
 [node name="Fire" type="Sprite" parent="."]
 position = Vector2( 42.2758, 36.1584 )
@@ -71,11 +69,13 @@ texture = ExtResource( 1 )
 "heat",
 ]]
 collision_layer = 8
-collision_mask = 4
+collision_mask = 20
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Heat"]
-position = Vector2( -0.316671, -44.0166 )
+position = Vector2( 39.8104, 37.322 )
 shape = SubResource( 7 )
+[connection signal="area_entered" from="Heat" to="Heat" method="_cool_down"]
+[connection signal="body_entered" from="Heat" to="Heat" method="_cool_down"]
 [connection signal="body_entered" from="Heat" to="Heat" method="_on_Heat_body_entered"]
 [connection signal="body_exited" from="Heat" to="Heat" method="_on_Heat_body_exited"]
