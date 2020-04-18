@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://UI/fonts/titlescreenfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://UI/Menu/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://UI/Menu/HowTo.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI/Menu/fake_background.png" type="Texture" id=4]
+[ext_resource path="res://UI/Menu/Credits.tscn" type="PackedScene" id=5]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -43,18 +44,28 @@ __meta__ = {
 }
 
 [node name="Start" type="Button" parent="MarginContainer/Buttons"]
-margin_top = 394.0
+margin_top = 307.0
 margin_right = 255.0
-margin_bottom = 456.0
+margin_bottom = 369.0
 custom_fonts/font = ExtResource( 1 )
 text = "{Start}"
 
 [node name="HowTo" type="Button" parent="MarginContainer/Buttons"]
+margin_top = 394.0
+margin_right = 255.0
+margin_bottom = 456.0
+custom_fonts/font = ExtResource( 1 )
+text = "{how to}"
+
+[node name="Credits" type="Button" parent="MarginContainer/Buttons"]
 margin_top = 481.0
 margin_right = 255.0
 margin_bottom = 543.0
 custom_fonts/font = ExtResource( 1 )
-text = "{how to}"
+text = "{Credits}"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Quit" type="Button" parent="MarginContainer/Buttons"]
 margin_top = 568.0
@@ -64,6 +75,10 @@ custom_fonts/font = ExtResource( 1 )
 text = "{Quit}"
 
 [node name="HowTo" parent="." instance=ExtResource( 3 )]
+
+[node name="Credits" parent="." instance=ExtResource( 5 )]
+visible = false
 [connection signal="pressed" from="MarginContainer/Buttons/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="MarginContainer/Buttons/HowTo" to="." method="_on_HowTo_pressed"]
+[connection signal="pressed" from="MarginContainer/Buttons/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="pressed" from="MarginContainer/Buttons/Quit" to="." method="_on_Quit_pressed"]

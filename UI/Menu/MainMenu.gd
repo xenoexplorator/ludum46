@@ -16,3 +16,7 @@ func _on_Quit_pressed():
 
 func _on_HowTo_pressed():
 	$HowTo.show()
+
+
+func _on_Credits_pressed():
+	$Credits.show()
