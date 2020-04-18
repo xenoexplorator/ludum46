@@ -5,6 +5,8 @@ class_name Player
 export (int) var MovementSpeed : int
 export (float) var UpdraftMultiplier : float
 
+var is_in_heat : bool = false
+
 signal barrier_created(position, target)
 
 func _physics_process(delta):
