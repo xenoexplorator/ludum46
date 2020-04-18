@@ -1,0 +1,113 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UI/fonts/titlescreenfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://UI/Menu/HowTo.gd" type="Script" id=2]
+[ext_resource path="res://UI/fonts/PopupText.tres" type="DynamicFont" id=3]
+
+[node name="Credits" type="Popup"]
+visible = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 75.0
+margin_top = 75.0
+margin_right = -75.0
+margin_bottom = -75.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.803922, 0.823529, 0.972549, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1090.0
+margin_bottom = 539.0
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer"]
+margin_right = 543.0
+margin_bottom = 539.0
+size_flags_horizontal = 3
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "Programming:
+
+[tornado]      [color=yellow]Cédric Pinard[/color]
+
+     [color=purple]Mélanie Ellias[/color]
+
+     [color=teal]Francois Boivin[/color]
+	
+      [/tornado]"
+text = "Programming:
+
+      Cédric Pinard
+
+     Mélanie Ellias
+
+     Francois Boivin
+	
+      "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 547.0
+margin_right = 1090.0
+margin_bottom = 539.0
+size_flags_horizontal = 3
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 543.0
+margin_bottom = 267.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "Artwork:
+
+[tornado] [color=fuchsia]     Olivier Boily"
+text = "Artwork:
+
+      Olivier Boily"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 271.0
+margin_right = 543.0
+margin_bottom = 539.0
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "Extra credits:
+    
+	 [color=green]Avocado Creamy Font[/color] By
+	      [shake]Almarkhatype Studio"
+text = "Extra credits:
+    
+	 Avocado Creamy Font By
+	      Almarkhatype Studio"
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 543.0
+margin_right = 1090.0
+margin_bottom = 605.0
+
+[node name="Button" type="Button" parent="VBoxContainer/CenterContainer"]
+margin_left = 417.0
+margin_right = 673.0
+margin_bottom = 62.0
+custom_fonts/font = ExtResource( 1 )
+text = "{Y'all rock!}"
+[connection signal="pressed" from="VBoxContainer/CenterContainer/Button" to="." method="_on_Button_pressed"]

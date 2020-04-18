@@ -1,13 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://UI/fonts/titlescreenfont.tres" type="DynamicFont" id=1]
-[ext_resource path="res://UI/fonts/Avocado Creamy.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://UI/fonts/PopupText.tres" type="DynamicFont" id=2]
 [ext_resource path="res://UI/Menu/HowTo.gd" type="Script" id=3]
-
-[sub_resource type="DynamicFont" id=1]
-size = 40
-use_filter = true
-font_data = ExtResource( 2 )
 
 [node name="HowTo" type="Popup"]
 anchor_right = 1.0
@@ -44,7 +39,7 @@ __meta__ = {
 margin_right = 1090.0
 margin_bottom = 539.0
 size_flags_vertical = 3
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = ExtResource( 2 )
 custom_colors/default_color = Color( 0.694118, 0.419608, 0.419608, 1 )
 bbcode_enabled = true
 bbcode_text = "Welcome, sprite! Your job is to protect the [tornado][color=red]flame of the campfire[/color][/tornado] from all that nasty [shake][color=blue]rain[/color][/shake] that's been falling lately.
