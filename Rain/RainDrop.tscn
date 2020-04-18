@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Rain/drop_prog.png" type="Texture" id=1]
+[ext_resource path="res://Rain/droplet.png" type="Texture" id=1]
 [ext_resource path="res://Rain/RainDrop.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 50.0
+radius = 20.0
 
 [node name="RainDrop" type="KinematicBody2D"]
 collision_layer = 0
@@ -17,5 +17,5 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
-rect = Rect2( -50, -50, 100, 100 )
+rect = Rect2( -20, -20, 40, 40 )
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_screen_exited"]
