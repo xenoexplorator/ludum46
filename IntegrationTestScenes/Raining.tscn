@@ -13,10 +13,10 @@ position = Vector2( 566.117, 455.496 )
 position = Vector2( 41.9794, 16.7162 )
 
 [node name="Interface" parent="." instance=ExtResource( 1 )]
-margin_left = 42.2961
-margin_top = 110.621
-margin_right = 42.2961
-margin_bottom = 110.621
+margin_left = 467.754
+margin_top = 736.501
+margin_right = 467.754
+margin_bottom = 736.501
 
 [node name="RainDrop" parent="." instance=ExtResource( 3 )]
 position = Vector2( 696.259, 87.8458 )
