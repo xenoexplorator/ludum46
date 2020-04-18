@@ -9,19 +9,42 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Transition",
+"class": "Exit_Transition",
+"language": "GDScript",
+"path": "res://UI/transitioners/exit_transition.gd"
+}, {
 "base": "RigidBody2D",
 "class": "Player",
 "language": "GDScript",
 "path": "res://Player/Player.gd"
+}, {
+"base": "Transition",
+"class": "Scene_Transition",
+"language": "GDScript",
+"path": "res://UI/transitioners/scene_transition.gd"
+}, {
+"base": "Node",
+"class": "Transition",
+"language": "GDScript",
+"path": "res://UI/transitioners/transition.gd"
 } ]
 _global_script_class_icons={
-"Player": ""
+"Exit_Transition": "",
+"Player": "",
+"Scene_Transition": "",
+"Transition": ""
 }
 
 [application]
 
 config/name="Ludum 46"
+run/main_scene="res://UI/Menu/MainMenu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+SceneTransitioner="*res://UI/SceneTransitioner.tscn"
 
 [display]
 

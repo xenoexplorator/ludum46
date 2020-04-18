@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/fonts/titlescreenfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://UI/fonts/Avocado Creamy.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://UI/Menu/HowTo.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="HowTo" type="Popup"]
+visible = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 75.0
+margin_top = 75.0
+margin_right = -75.0
+margin_bottom = -75.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.803922, 0.823529, 0.972549, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 1090.0
+margin_bottom = 539.0
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.694118, 0.419608, 0.419608, 1 )
+bbcode_enabled = true
+bbcode_text = "Welcome, sprite! Your job is to protect the [tornado][color=red]flame of the campfire[/color][/tornado] from all that nasty [shake][color=blue]rain[/color][/shake] that's been falling lately.
+
+Use the arrow keys or WASD to move around and stop as many raindrops as you can.
+
+You can also use flame barriers to protect those logs. try pressing the space bar to summon them."
+text = "Welcome, sprite! Your job is to protect the flame of the campfire from all that nasty rain that's been falling lately.
+
+Use the arrow keys or WASD to move around and stop as many raindrops as you can.
+
+You can also use flame barriers to protect those logs. try pressing the space bar to summon them."
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 543.0
+margin_right = 1090.0
+margin_bottom = 605.0
+
+[node name="Button" type="Button" parent="VBoxContainer/CenterContainer"]
+margin_left = 451.0
+margin_right = 638.0
+margin_bottom = 62.0
+size_flags_horizontal = 0
+custom_fonts/font = ExtResource( 1 )
+text = "{got it!}"
+[connection signal="pressed" from="VBoxContainer/CenterContainer/Button" to="." method="_on_Button_pressed"]
