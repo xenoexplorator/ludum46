@@ -18,4 +18,6 @@ func _on_screen_exited() -> void:
 
 
 func _on_body_entered(body: Node) -> void:
+	if body is Player:
+		body.hurt()
 	queue_free()

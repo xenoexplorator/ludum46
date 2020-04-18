@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Player/firesprite.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
@@ -29,6 +29,27 @@ tracks/0/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.7, 1.2 ), Vector2( 1, 1 ) ]
 }
 
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0705882, 0.14902, 0.0392157, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 0.254902, 0.0509804, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id=6]
+ProgressBar/colors/font_color = Color( 0.94, 0.94, 0.94, 1 )
+ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+ProgressBar/fonts/font = null
+ProgressBar/styles/bg = SubResource( 4 )
+ProgressBar/styles/fg = SubResource( 5 )
+
 [node name="Player" type="RigidBody2D"]
 collision_layer = 4
 collision_mask = 31
@@ -58,4 +79,16 @@ anims/stretch = SubResource( 3 )
 [node name="BarrierSkill" type="Node2D" parent="."]
 script = ExtResource( 3 )
 cooldown = 5.0
+
+[node name="HeatGauge" type="ProgressBar" parent="."]
+margin_left = -25.0
+margin_top = 75.0493
+margin_right = 25.0
+margin_bottom = 89.0493
+theme = SubResource( 6 )
+value = 100.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]
