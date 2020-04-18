@@ -4,6 +4,13 @@ class_name Player
 
 export (int) var MovementSpeed : int
 export (float) var UpdraftMultiplier : float
+export (float) var HealingSpeed : float = 4
+export (float) var DamagePerDroplet : float = 15
+
+const MaskNoWater = 15
+const MaskWithWater = 31
+
+var is_in_heat : bool = false
 
 signal barrier_created(position, target)
 
@@ -18,8 +25,23 @@ func _physics_process(delta):
 	
 	#Spawn Barrier
 	if Input.is_action_just_pressed("spawn_barrier"):
-		emit_signal("barrier_created", self.position, self)
+		$BarrierSkill.use_skill()
+	
+	if is_in_heat:
+		$HeatGauge.value += (100/HealingSpeed) * delta
+		collision_mask = MaskWithWater
+		set_alpha()
 
+func hurt():
+	$HeatGauge.value -= DamagePerDroplet
+	set_alpha()
+	if $HeatGauge.value == 0:
+		collision_mask = MaskNoWater
+
+func set_alpha():
+	var alpha = (0.8 * ($HeatGauge.value/100)) + 0.2
+	print(alpha)
+	$Sprite.modulate = Color(1, 1, 1, alpha)
 
 func get_inputs() -> Vector2:
 	var dir : Vector2
