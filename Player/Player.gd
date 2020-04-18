@@ -5,9 +5,21 @@ class_name Player
 export (int) var MovementSpeed : int
 export (float) var UpdraftMultiplier : float
 
+signal barrier_created(position, target)
+
 func _physics_process(delta):
+	#Movement
 	var thrust : Vector2 = get_movement_force(get_inputs())
+	if thrust.x > 0:
+		$Sprite.scale.x = abs($Sprite.scale.x)
+	if thrust.x < 0:
+		$Sprite.scale.x = abs($Sprite.scale.x) * -1
 	apply_central_impulse(thrust)
+	
+	#Spawn Barrier
+	if Input.is_action_just_pressed("spawn_barrier"):
+		emit_signal("barrier_created", self.position, self)
+
 
 func get_inputs() -> Vector2:
 	var dir : Vector2

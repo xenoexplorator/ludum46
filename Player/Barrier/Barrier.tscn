@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/Barrier/Line.png" type="Texture" id=1]
+[ext_resource path="res://Player/Barrier/Barrier.gd" type="Script" id=2]
+
+[sub_resource type="PhysicsMaterial" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 75, 15 )
+
+[node name="Barrier" type="RigidBody2D"]
+position = Vector2( 584.701, 515.307 )
+collision_layer = 32
+collision_mask = 16
+mode = 2
+physics_material_override = SubResource( 1 )
+gravity_scale = -0.1
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.937255, 0.333333, 0.00784314, 1 )
+position = Vector2( 62, 0 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2( 62, 0 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 63.1579, -1.23978e-05 )
+scale = Vector2( 7.5374, 1.55402 )
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
