@@ -1,5 +1,7 @@
 extends Area2D
 
+class_name RainDrop
+
 export (float, -180, 180, 20) var angle := 0.0
 export (int) var speed := 50
 var velocity : Vector2
@@ -20,4 +22,9 @@ func _on_screen_exited() -> void:
 func _on_body_entered(body: Node) -> void:
 	if body is Player:
 		body.hurt()
-	queue_free()
+		turn_to_steam()
+	else:
+		queue_free()
+
+func turn_to_steam():
+	$AnimationPlayer.play("steam")

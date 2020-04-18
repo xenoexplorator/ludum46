@@ -40,7 +40,6 @@ func hurt():
 
 func set_alpha():
 	var alpha = (0.8 * ($HeatGauge.value/100)) + 0.2
-	print(alpha)
 	$Sprite.modulate = Color(1, 1, 1, alpha)
 
 func get_inputs() -> Vector2:

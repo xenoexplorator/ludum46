@@ -18,7 +18,8 @@ func _on_Heat_body_exited(body):
 		body.is_in_heat = false
 
 func _cool_down(rain_drop):
-	heat -= 5
-	heat = max(0, heat)
-	emit_signal("heat_changed", heat)
-	
+	if rain_drop is RainDrop:
+		heat -= 5
+		heat = max(0, heat)
+		emit_signal("heat_changed", heat)
+		rain_drop.turn_to_steam()

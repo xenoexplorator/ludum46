@@ -5,7 +5,7 @@
 [ext_resource path="res://Campfire/Heat.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 33.5954, 52.3368 )
+extents = Vector2( 33.9201, 15.6576 )
 
 [sub_resource type="Gradient" id=2]
 colors = PoolColorArray( 0.976471, 0.32549, 0.00784314, 0.462745, 0.976471, 0.631373, 0.00784314, 0.164706 )
@@ -53,7 +53,7 @@ scale = Vector2( 0.188298, 0.162454 )
 texture = ExtResource( 2 )
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2( 41.935, 37.9301 )
+position = Vector2( 41.935, 69.8104 )
 shape = SubResource( 1 )
 
 [node name="Embers" type="Particles2D" parent="."]
@@ -73,9 +73,9 @@ collision_mask = 20
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Heat"]
-position = Vector2( 39.8104, 37.322 )
+position = Vector2( 42.1431, 35.7669 )
 shape = SubResource( 7 )
 [connection signal="area_entered" from="Heat" to="Heat" method="_cool_down"]
-[connection signal="body_entered" from="Heat" to="Heat" method="_cool_down"]
 [connection signal="body_entered" from="Heat" to="Heat" method="_on_Heat_body_entered"]
+[connection signal="body_entered" from="Heat" to="Heat" method="_cool_down"]
 [connection signal="body_exited" from="Heat" to="Heat" method="_on_Heat_body_exited"]
