@@ -1,6 +1,6 @@
 extends Node2D
 
-enum Pattern { RANDOM, WAVE, RAYS, BEAMS }
+enum Pattern { RANDOM, WAVE, RAYS, BEAMS, CLUSTER }
 const SPAWN_THRESHOLD := 10.0
 const RainDrop = preload("res://Rain/RainDrop.tscn")
 export (Pattern) var pattern := Pattern.RANDOM
@@ -25,6 +25,8 @@ func _process(delta: float) -> void:
 				spawn_rays()
 			Pattern.BEAMS:
 				spawn_beams()
+			Pattern.CLUSTER:
+				spawn_cluster()
 	$Control/VBoxContainer/Count.text = "Drops# %d" % $Container.get_child_count()
 
 
@@ -62,6 +64,19 @@ func spawn_beams() -> void:
 	for v in range(60, 220, 10):
 		var drop = RainDrop.instance()
 		drop.position = origin
+		drop.angle = angle
+		drop.speed = v
+		$Container.add_child(drop)
+
+
+func spawn_cluster() -> void:
+	var origin = Vector2(rand_range(100, 2480), rand_range(40, 90))
+	var target = Vector2(rand_range(100, 2480), rand_range(1360, 1460))
+	var angle = rad2deg((target - origin).angle()) - 90
+	var v = rand_range(70, 120)
+	for th in range(0, 360, 45):
+		var drop = RainDrop.instance()
+		drop.position = origin + 50 * Vector2(cos(deg2rad(th)), sin(deg2rad(th)))
 		drop.angle = angle
 		drop.speed = v
 		$Container.add_child(drop)

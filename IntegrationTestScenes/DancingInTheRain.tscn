@@ -58,12 +58,19 @@ margin_right = 64.0
 margin_bottom = 112.0
 text = "Beams"
 
-[node name="Count" type="Label" parent="Control/VBoxContainer"]
+[node name="Cluster" type="Button" parent="Control/VBoxContainer"]
 margin_top = 116.0
 margin_right = 64.0
-margin_bottom = 130.0
+margin_bottom = 136.0
+text = "Cluster"
+
+[node name="Count" type="Label" parent="Control/VBoxContainer"]
+margin_top = 140.0
+margin_right = 64.0
+margin_bottom = 154.0
 [connection signal="value_changed" from="Control/VBoxContainer/SpawnRate" to="." method="change_spawn_rate"]
 [connection signal="pressed" from="Control/VBoxContainer/Random" to="." method="change_pattern" binds= [ 0 ]]
 [connection signal="pressed" from="Control/VBoxContainer/Wave" to="." method="change_pattern" binds= [ 1 ]]
 [connection signal="pressed" from="Control/VBoxContainer/Rays" to="." method="change_pattern" binds= [ 2 ]]
 [connection signal="pressed" from="Control/VBoxContainer/Beams" to="." method="change_pattern" binds= [ 3 ]]
+[connection signal="pressed" from="Control/VBoxContainer/Cluster" to="." method="change_pattern" binds= [ 4 ]]
