@@ -9,6 +9,7 @@ onready var _next_spawn := spawn_delay
 
 func _ready() -> void:
 	randomize()
+	get_tree().call_group("hud", "start")
 
 
 func _process(delta: float) -> void:
