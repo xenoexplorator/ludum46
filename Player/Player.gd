@@ -18,7 +18,7 @@ func _physics_process(delta):
 	
 	#Spawn Barrier
 	if Input.is_action_just_pressed("spawn_barrier"):
-		emit_signal("barrier_created", self.position, self)
+		$BarrierSkill.use_skill()
 
 
 func get_inputs() -> Vector2:
