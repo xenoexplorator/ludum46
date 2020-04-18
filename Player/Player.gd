@@ -47,3 +47,8 @@ func right_pressed() -> bool:
 
 func left_pressed() -> bool:
 	return Input.is_action_pressed("move_left") if not Input.is_action_pressed("move_right") else false
+
+
+func _on_Player_body_entered(body):
+	if(linear_velocity.length() > 250):
+		$AnimationPlayer.play("stretch",-1,2,false)
