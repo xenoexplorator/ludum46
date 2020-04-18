@@ -1,15 +1,40 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Campfire/Campfire.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Level/Boundaries.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 390 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 640, 10 )
 
 [node name="Space" type="Node2D"]
 
+[node name="VerticalWall" type="StaticBody2D" parent="."]
+position = Vector2( 0, 390 )
+
+[node name="VerticalCollisionBox" type="CollisionShape2D" parent="VerticalWall"]
+shape = SubResource( 1 )
+
+[node name="VerticalWall2" type="StaticBody2D" parent="."]
+position = Vector2( 1280, 390 )
+
+[node name="VerticalCollisionBox" type="CollisionShape2D" parent="VerticalWall2"]
+shape = SubResource( 1 )
+
+[node name="HorizontalWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HorizontalWall"]
+position = Vector2( 640, 0 )
+shape = SubResource( 2 )
+
+[node name="HorizontalWall2" type="StaticBody2D" parent="."]
+position = Vector2( 0, 780 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HorizontalWall2"]
+position = Vector2( 640, 0 )
+shape = SubResource( 2 )
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 646.361, 385.812 )
-
-[node name="Campfire" parent="." instance=ExtResource( 2 )]
-position = Vector2( 639.68, 771.624 )
-
-[node name="Boundaries" parent="." instance=ExtResource( 3 )]
+physics_material_override = null

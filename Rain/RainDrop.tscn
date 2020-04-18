@@ -4,7 +4,7 @@
 [ext_resource path="res://Rain/RainDrop.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 20.0
+radius = 50.0
 
 [node name="RainDrop" type="KinematicBody2D"]
 collision_layer = 0
