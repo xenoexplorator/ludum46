@@ -64,7 +64,6 @@ custom_fonts/font = ExtResource( 1 )
 text = "{Quit}"
 
 [node name="HowTo" parent="." instance=ExtResource( 3 )]
-visible = false
 [connection signal="pressed" from="MarginContainer/Buttons/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="MarginContainer/Buttons/HowTo" to="." method="_on_HowTo_pressed"]
 [connection signal="pressed" from="MarginContainer/Buttons/Quit" to="." method="_on_Quit_pressed"]

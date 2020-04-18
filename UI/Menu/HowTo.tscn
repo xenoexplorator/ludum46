@@ -10,7 +10,6 @@ use_filter = true
 font_data = ExtResource( 2 )
 
 [node name="HowTo" type="Popup"]
-visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 75.0

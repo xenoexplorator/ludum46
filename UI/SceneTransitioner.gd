@@ -1,13 +1,7 @@
-extends ColorRect
+extends CanvasLayer
 
-var invisible_black : Color = Color(0,0,0,0)
 var transitioning : bool = false
 var currentTransition : Transition
-
-func _ready():
-	$Tween.interpolate_property(self, "color", invisible_black, Color.black, 1)
-	$TweenShow.interpolate_property(self, "color", Color.black, invisible_black, 1)
-	pass
 
 func transition_to_scene(scene : PackedScene):
 	if not transitioning:
@@ -22,10 +16,9 @@ func transition_to_quit():
 func commit_transition():
 		transitioning = true
 		add_child(currentTransition)
-		$Tween.start()
+		$AnimationPlayer.play("transition")
 
-func _on_Tween_tween_all_completed():
+func change():
 	currentTransition.transition()
 	remove_child(currentTransition)
 	transitioning = false
-	$TweenShow.start()
