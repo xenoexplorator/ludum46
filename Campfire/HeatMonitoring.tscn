@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Campfire/TextureProgress.gd" type="Script" id=1]
+[ext_resource path="res://Campfire/HeatMonitoring.gd" type="Script" id=2]
+[ext_resource path="res://Campfire/Assets/Under.png" type="Texture" id=3]
+[ext_resource path="res://Campfire/Assets/Progress.png" type="Texture" id=4]
+
+[node name="HeatMonitoring" type="HBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeatBar" type="TextureProgress" parent="."]
+margin_right = 474.0
+margin_bottom = 780.0
+value = 80.0
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+tint_progress = Color( 0.945098, 0.105882, 0.105882, 1 )
+script = ExtResource( 1 )
+[connection signal="max_changed" from="." to="HeatBar" method="_on_HeatMonitoring_max_changed"]
