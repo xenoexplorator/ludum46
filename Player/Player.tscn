@@ -31,7 +31,7 @@ tracks/0/keys = {
 
 [node name="Player" type="RigidBody2D"]
 collision_layer = 4
-collision_mask = 23
+collision_mask = 31
 mode = 2
 physics_material_override = SubResource( 1 )
 gravity_scale = 0.3
@@ -57,5 +57,5 @@ anims/stretch = SubResource( 3 )
 
 [node name="BarrierSkill" type="Node2D" parent="."]
 script = ExtResource( 3 )
-cooldown = 3.0
+cooldown = 5.0
 [connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]

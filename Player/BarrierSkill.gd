@@ -16,7 +16,10 @@ func use_skill():
 
 func _physics_process(delta):
 	if skill_used:
-		elapsed += delta
+		if get_parent().is_in_heat :
+			elapsed += delta * 2
+		else:
+			elapsed += delta
 		var percentage_recharge = min(elapsed/cooldown, 1)
 		get_tree().call_group("hud", "update_barrier_recharge", percentage_recharge)
 		if percentage_recharge == 1:
