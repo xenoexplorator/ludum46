@@ -2,8 +2,6 @@ extends RigidBody2D
 
 var target : Node2D
 
-func _ready():
-	pass
 
 func _physics_process(delta):
 	if target:

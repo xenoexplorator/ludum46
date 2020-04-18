@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player/firesprite.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Player/BarrierSkill.gd" type="Script" id=3]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.2
@@ -53,4 +54,8 @@ shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/stretch = SubResource( 3 )
+
+[node name="BarrierSkill" type="Node2D" parent="."]
+script = ExtResource( 3 )
+cooldown = 3.0
 [connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]
