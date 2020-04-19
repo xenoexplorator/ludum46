@@ -40,6 +40,8 @@ margin_bottom = 716.189
 position = Vector2( 625, 350 )
 space_override = 1
 gravity_vec = Vector2( 0, -1.5 )
+collision_layer = 0
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Updraft"]
 shape = SubResource( 1 )
