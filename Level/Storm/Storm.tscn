@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Level/Storm/Storm.gd" type="Script" id=1]
 [ext_resource path="res://Level/Storm/StormEvents/SpawnArc.gd" type="Script" id=2]
 [ext_resource path="res://Level/Storm/StormEvents/SpawnCluster.gd" type="Script" id=3]
 [ext_resource path="res://Level/Storm/StormEvents/SpawnLog.gd" type="Script" id=4]
+[ext_resource path="res://Level/Storm/StormEvents/SpawnCurtain.gd" type="Script" id=5]
+[ext_resource path="res://Level/Storm/StormEvents/ToggleRandom.gd" type="Script" id=6]
 
 [node name="Storm" type="Node2D" groups=[
 "storm",
@@ -14,7 +16,7 @@ script = ExtResource( 1 )
 
 [node name="SpawnArc" type="Node" parent="EventsContainer"]
 script = ExtResource( 2 )
-timing = 10.0
+timing = 20.0
 repeating = true
 repeatTimer = 0.1
 repeat_count = 20
@@ -38,5 +40,21 @@ script = ExtResource( 4 )
 timing = 30.0
 repeating = true
 repeatTimer = 30.0
+
+[node name="SpawnCurtain" type="Node" parent="EventsContainer"]
+script = ExtResource( 5 )
+timing = 5.0
+repeating = true
+repeatTimer = 0.2
+repeat_count = 12
+origin = Vector2( 1200, 40 )
+drift = Vector2( -30, 12 )
+count = 6
+bidirectional = true
+angle = -30.0
+
+[node name="ToggleRandom" type="Node" parent="EventsContainer"]
+script = ExtResource( 6 )
+timing = 2.0
 
 [node name="DropsContainer" type="Node2D" parent="."]

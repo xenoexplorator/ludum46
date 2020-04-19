@@ -8,7 +8,7 @@ export (int) var num_drops
 export (float) var radius
 export (float) var speed
 
-func _run():
+func _run(storm):
 	for n in range(num_drops):
 		var theta = deg2rad(n * 360 / num_drops)
 		var delta = radius * Vector2(cos(theta), sin(theta))
@@ -16,4 +16,4 @@ func _run():
 		drop.position = origin + delta
 		drop.angle = angle
 		drop.speed = speed
-		get_tree().call_group("storm", "spawn_drop", drop)
+		storm.spawn_drop(drop)

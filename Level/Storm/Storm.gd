@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 
 	for event in $EventsContainer.get_children():
 		if timer > event.timing:
-			event.run()
+			event.run(self)
 
 
 func spawn_random():

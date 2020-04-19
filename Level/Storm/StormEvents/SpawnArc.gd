@@ -10,11 +10,11 @@ export (float) var speed
 
 var running = false
 
-func _run():
+func _run(storm):
 	var angle_step = (end_angle - start_angle) / num_drops
 	for a in range(start_angle, end_angle + angle_step/2, angle_step):
 		var drop = RainDrop.instance()
 		drop.position = origin
 		drop.angle = a
 		drop.speed = speed
-		get_tree().call_group("storm", "spawn_drop", drop)
+		storm.spawn_drop(drop)

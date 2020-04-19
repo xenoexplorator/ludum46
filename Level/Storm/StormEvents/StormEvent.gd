@@ -7,11 +7,11 @@ export (float) var repeatTimer := 0.0
 export (int) var repeat_count := -1
 
 
-func run():
-	_run()
+func run(storm):
+	_run(storm)
 	_update_after_run()
 
-func _run():
+func _run(storm):
 	pass
 
 func _update_after_run():
