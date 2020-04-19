@@ -29,7 +29,7 @@ __meta__ = {
 [node name="Storm" parent="." instance=ExtResource( 7 )]
 
 [node name="Campfire" parent="." instance=ExtResource( 3 )]
-position = Vector2( 499.492, 442.087 )
+position = Vector2( 518.116, 452.238 )
 
 [node name="BarrierSpawner" parent="." instance=ExtResource( 4 )]
 
@@ -48,5 +48,3 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Updraft"]
 shape = SubResource( 1 )
 [connection signal="barrier_created" from="Player" to="BarrierSpawner" method="spawn"]
-
-[editable path="Campfire"]
