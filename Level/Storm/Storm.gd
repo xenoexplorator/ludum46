@@ -3,6 +3,7 @@ extends Node2D
 # i.e. le contenu du level
 
 const SPAWN_THRESHOLD := 10.0
+const LogPickup = preload("res://LogPickup/LogPickup.tscn")
 const RainDrop = preload("res://Rain/RainDrop.tscn")
 export (float) var timer := 0.0
 export (float) var spawn_rate := 10.0
@@ -11,7 +12,8 @@ onready var next_random = SPAWN_THRESHOLD / spawn_rate
 
 var storm_events := [
 	StormEvent.new(StormEvent.EventType.SPAWN_FRONT, 10, {origin=Vector2(50, 30), start_angle=-20, end_angle=60, num_drops=8, repeat=0.1, duration=2, speed=120}),
-	StormEvent.new(StormEvent.EventType.SPAWN_CLUSTER, 15, {origin=Vector2(560, 60), angle=-10, num_drops=10, radius=50, speed=100})
+	StormEvent.new(StormEvent.EventType.SPAWN_CLUSTER, 15, {origin=Vector2(560, 60), angle=-10, num_drops=10, radius=50, speed=100}),
+	StormEvent.new(StormEvent.EventType.SPAWN_LOG, 30, {repeat=30}),
 	]
 
 
@@ -65,6 +67,8 @@ func run_event(event: StormEvent):
 			var num_drops = event.get_param("num_drops")
 			var radius = event.get_param("radius")
 			spawn_cluster(origin, angle, speed, num_drops, radius)
+		StormEvent.EventType.SPAWN_LOG:
+			spawn_log()
 
 	event.update_after_run()
 
@@ -88,3 +92,12 @@ func spawn_cluster(origin: Vector2, angle: float, speed: float, num_drops: int, 
 		drop.angle = angle
 		drop.speed = speed
 		add_child(drop)
+
+
+func spawn_log() -> void:
+	var pickup = LogPickup.instance()
+	var x = rand_range(80, 1200)
+	var y = rand_range(80, 700)
+	pickup.position = Vector2(x, y)
+	# TODO connecter le signal
+	add_child(pickup)

@@ -27,4 +27,5 @@ func _on_body_entered(body: Node) -> void:
 		queue_free()
 
 func turn_to_steam():
+	set_deferred("monitoring", false)
 	$AnimationPlayer.play("steam")

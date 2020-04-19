@@ -6,20 +6,12 @@ enum EventType {
 	SET_RATE,
 	SPAWN_FRONT,
 	SPAWN_CLUSTER,
+	SPAWN_LOG,
 }
 
 export (EventType) var event_type := EventType.NONE
 export (float) var timing
-export (Dictionary) var parameters := {
-	duration = 0,
-	origin = Vector2(),
-	angle = 0,
-	speed = 100,
-	num_drops = 3,
-	start_angle = -15,
-	end_angle = 15,
-	radius = 30,
-}
+export (Dictionary) var parameters := {}
 
 
 func _init(kind: int, when: float, params: Dictionary = {}):
@@ -35,5 +27,5 @@ func get_param(param: String):
 
 func update_after_run():
 	if parameters.has("repeat"):
-		if parameters["duration"] == 0 or timing < parameters["end_timing"]:
+		if not parameters.has("duration") or timing < parameters["end_timing"]:
 			timing += parameters["repeat"]

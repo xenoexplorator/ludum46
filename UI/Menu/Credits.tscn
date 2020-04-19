@@ -44,7 +44,7 @@ margin_bottom = 539.0
 size_flags_horizontal = 3
 custom_fonts/normal_font = ExtResource( 3 )
 bbcode_enabled = true
-bbcode_text = "Programming:
+bbcode_text = "[color=black]Programming:
 
 [tornado]      [color=yellow]Cédric Pinard[/color]
 
@@ -76,7 +76,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/normal_font = ExtResource( 3 )
 bbcode_enabled = true
-bbcode_text = "Artwork:
+bbcode_text = "[color=black]Artwork:
 
 [tornado] [color=fuchsia]     Olivier Boily"
 text = "Artwork:
@@ -90,7 +90,7 @@ margin_bottom = 539.0
 size_flags_vertical = 3
 custom_fonts/normal_font = ExtResource( 3 )
 bbcode_enabled = true
-bbcode_text = "Extra credits:
+bbcode_text = "[color=black]Extra credits:
     
 	 [color=green]Avocado Creamy Font[/color] By
 	      [shake]Almarkhatype Studio"
