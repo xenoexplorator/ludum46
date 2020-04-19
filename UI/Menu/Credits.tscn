@@ -9,6 +9,7 @@
 [ext_resource path="res://UI/Menu/controlsandcredits.png" type="Texture" id=7]
 
 [node name="Credits" type="Popup"]
+visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_bottom = -75.0
@@ -22,6 +23,9 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
@@ -45,24 +49,28 @@ margin_bottom = 515.0
 size_flags_horizontal = 3
 custom_fonts/normal_font = ExtResource( 3 )
 bbcode_enabled = true
-bbcode_text = "[color=black]Programming:
+bbcode_text = " [center] [color=black]	Programming:
+[center]
+[tornado]      
+	[color=#FF6000]Cédric Pinard[/color]
 
-[tornado]      [color=green]Cédric Pinard[/color]
+	[color=#AA4000]Francois Boivin[/color]
 
-     [color=purple]Mélanie Ellias[/color]
-
-     [color=teal]Francois Boivin[/color]
+	[color=#712A00]Mélanie Ellias[/color]
 	
-      [/tornado]"
-text = "Programming:
+      [/tornado]
+	 [/center]"
+text = "  	Programming:
 
-      Cédric Pinard
+      
+	Cédric Pinard
 
-     Mélanie Ellias
+	Francois Boivin
 
-     Francois Boivin
+	Mélanie Ellias
 	
-      "
+      
+	 "
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 margin_left = 547.0
@@ -71,34 +79,37 @@ margin_bottom = 515.0
 size_flags_horizontal = 3
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_left = 20.0
+margin_top = 20.0
 margin_right = 543.0
 margin_bottom = 255.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/normal_font = ExtResource( 3 )
 bbcode_enabled = true
-bbcode_text = "[color=black]Artwork:
+bbcode_text = "[center][color=black]Artwork:
 
-[tornado] [color=fuchsia]     Olivier Boily"
+ [center] [tornado] [color=#D24710]    Olivier Boily "
 text = "Artwork:
 
-      Olivier Boily"
+       Olivier Boily "
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_left = 20.0
 margin_top = 259.0
 margin_right = 543.0
 margin_bottom = 515.0
 size_flags_vertical = 3
 custom_fonts/normal_font = ExtResource( 3 )
 bbcode_enabled = true
-bbcode_text = "[color=black]Extra credits:
+bbcode_text = "[center][color=black]Extra credits:
     
-	 [color=green]Avocado Creamy Font[/color] By
-	      [shake]Almarkhatype Studio"
+[center] [color=green]	Avocado Creamy Font[/color] By
+	      [shake]Almarkhatype Studio  [/shake] [/center]"
 text = "Extra credits:
     
-	 Avocado Creamy Font By
-	      Almarkhatype Studio"
+ 	Avocado Creamy Font By
+	      Almarkhatype Studio   "
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 margin_top = 519.0
