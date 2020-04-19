@@ -58,6 +58,7 @@ physics_material_override = SubResource( 1 )
 gravity_scale = 0.3
 contacts_reported = 1
 contact_monitor = true
+linear_damp = 1.0
 script = ExtResource( 2 )
 MovementSpeed = 20
 UpdraftMultiplier = 2.0
