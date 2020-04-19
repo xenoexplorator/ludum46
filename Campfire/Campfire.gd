@@ -19,7 +19,7 @@ func cool_down(rain_drop):
 	emit_signal("heat_changed", heat)
 	rain_drop.turn_to_steam()
 	if heat == 0:
-		SceneTransitioner.transition_with_path("res://UI/Menu/MainMenu.tscn")
+		SceneTransitioner.go_to("res://UI/Menu/MainMenu.tscn")
 
 
 
