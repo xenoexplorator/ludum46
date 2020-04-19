@@ -6,6 +6,7 @@ enum EventType {
 	SET_RATE,
 	SPAWN_FRONT,
 	SPAWN_CLUSTER,
+	SPAWN_LOG,
 }
 
 export (EventType) var event_type := EventType.NONE
