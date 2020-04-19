@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 
 	for event in $EventsContainer.get_children():
 		if timer > event.timing:
-			run_event(event)
+			event.run()
 
 
 func spawn_random():
@@ -35,18 +35,16 @@ func spawn_random():
 	drop.position = Vector2(x, y)
 	drop.angle = rand_range(-10, 10) + rand_range(-10, 10)
 	drop.speed = rand_range(120, 180)
-	add_child(drop)
+	spawn_drop(drop)
 	next_random += SPAWN_THRESHOLD / spawn_rate
-
-
-func run_event(event: StormEvent):
-	event._run()
 
 
 func spawn_log() -> void:
 	var pickup = LogPickup.instance()
 	var x = rand_range(80, 1200)
 	var y = rand_range(80, 700)
+	if y > 512:
+		x = rand_range(300, 980)
 	pickup.position = Vector2(x, y)
 	pickup.connect("picked_up", campfire, "add_log")
 	add_child(pickup)

@@ -1,20 +1,23 @@
 extends Node
 class_name StormEvent
 
-export (float) var timing
-export (bool) var repeating = false
-export (float) var repeatTimer = 0
+export (float) var timing := 0.0
+export (bool) var repeating := false
+export (float) var repeatTimer := 0.0
+export (int) var repeat_count := -1
 
-signal run_complete
 
-func _ready():
-	connect("run_complete", self, "_update_after_run")
+func run():
+	_run()
+	_update_after_run()
 
 func _run():
 	pass
 
 func _update_after_run():
-	if repeating:
+	if repeating and repeat_count != 0:
 		timing += repeatTimer
+		if repeat_count > 0:
+			repeat_count -= 1
 	else:
 		queue_free()
