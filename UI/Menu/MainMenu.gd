@@ -7,11 +7,11 @@ func _ready():
 
 
 func _on_Start_pressed():
-	SceneTransitioner.transition_to_scene(Level)
+	SceneTransitioner.go_to(Level)
 
 
 func _on_Quit_pressed():
-	SceneTransitioner.transition_to_quit()
+	SceneTransitioner.go_to(null)
 
 
 func _on_HowTo_pressed():
