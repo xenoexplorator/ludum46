@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://UI/fonts/PopupText.tres" type="DynamicFont" id=1]
+[ext_resource path="res://UI/fonts/Avocado Creamy.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Level/Overlay/assets/flameshield_timer_dark.png" type="Texture" id=2]
 [ext_resource path="res://Level/Overlay/assets/flameshield_timer.png" type="Texture" id=3]
 [ext_resource path="res://Level/Overlay/Timer.gd" type="Script" id=4]
@@ -11,6 +11,11 @@
 [ext_resource path="res://Level/Overlay/assets/campfire_dark.png" type="Texture" id=9]
 [ext_resource path="res://Level/Overlay/CampfireVisual.gd" type="Script" id=10]
 [ext_resource path="res://Level/overlay.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 26
+use_filter = true
+font_data = ExtResource( 1 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "ready"
@@ -90,11 +95,11 @@ margin_bottom = 108.0
 [node name="Timer" type="Label" parent="UpLeftBox/CenterContainer" groups=[
 "hud",
 ]]
-margin_left = 59.0
-margin_top = 35.0
-margin_right = 121.0
-margin_bottom = 72.0
-custom_fonts/font = ExtResource( 1 )
+margin_left = 63.0
+margin_top = 38.0
+margin_right = 116.0
+margin_bottom = 69.0
+custom_fonts/font = SubResource( 1 )
 text = "00:00"
 align = 1
 script = ExtResource( 4 )
