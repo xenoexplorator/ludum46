@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "StaticBody2D",
+"class": "Campfire",
+"language": "GDScript",
+"path": "res://Campfire/Campfire.gd"
+}, {
 "base": "Transition",
 "class": "Exit_Transition",
 "language": "GDScript",
@@ -45,6 +50,7 @@ _global_script_classes=[ {
 "path": "res://UI/transitioners/transition.gd"
 } ]
 _global_script_class_icons={
+"Campfire": "",
 "Exit_Transition": "",
 "PathSceneTransition": "",
 "Player": "",
