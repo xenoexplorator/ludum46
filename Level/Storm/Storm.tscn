@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Level/Storm/Storm.gd" type="Script" id=1]
 [ext_resource path="res://Level/Storm/StormEvents/SpawnArc.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Level/Storm/StormEvents/SpawnCurtain.gd" type="Script" id=5]
 [ext_resource path="res://Level/Storm/StormEvents/ToggleRandom.gd" type="Script" id=6]
 [ext_resource path="res://Level/Storm/StormEvents/SpawnBox.gd" type="Script" id=7]
+[ext_resource path="res://Level/Storm/StormEvents/ChangeSpawnRate.gd" type="Script" id=8]
 
 [node name="Storm" type="Node2D" groups=[
 "storm",
@@ -56,7 +57,7 @@ angle = -30.0
 
 [node name="ToggleRandom" type="Node" parent="EventsContainer"]
 script = ExtResource( 6 )
-timing = 2.0
+timing = 180.0
 
 [node name="SpawnBox" type="Node" parent="EventsContainer"]
 script = ExtResource( 7 )
@@ -68,5 +69,30 @@ angle_min = -30.0
 angle_max = -30.0
 speed_min = 90.0
 speed_max = 160.0
+
+[node name="ChangeSpawnRate" type="Node" parent="EventsContainer"]
+script = ExtResource( 8 )
+timing = 25.0
+new_rate = 15.0
+
+[node name="ChangeSpawnRate2" type="Node" parent="EventsContainer"]
+script = ExtResource( 8 )
+timing = 35.0
+new_rate = 20.0
+
+[node name="ChangeSpawnRate3" type="Node" parent="EventsContainer"]
+script = ExtResource( 8 )
+timing = 50.0
+new_rate = 30.0
+
+[node name="ChangeSpawnRate4" type="Node" parent="EventsContainer"]
+script = ExtResource( 8 )
+timing = 70.0
+new_rate = 50.0
+
+[node name="ChangeSpawnRate5" type="Node" parent="EventsContainer"]
+script = ExtResource( 8 )
+timing = 90.0
+new_rate = 80.0
 
 [node name="DropsContainer" type="Node2D" parent="."]
