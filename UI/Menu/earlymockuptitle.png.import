@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/barrier.png-7d4a5e7a2279aa98ee32a7280b6c5e37.stex"
+path="res://.import/earlymockuptitle.png-8544e0a31f7dd5e5bd6f34f162e0b694.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level/Overlay/barrier.png"
-dest_files=[ "res://.import/barrier.png-7d4a5e7a2279aa98ee32a7280b6c5e37.stex" ]
+source_file="res://UI/Menu/earlymockuptitle.png"
+dest_files=[ "res://.import/earlymockuptitle.png-8544e0a31f7dd5e5bd6f34f162e0b694.stex" ]
 
 [params]
 

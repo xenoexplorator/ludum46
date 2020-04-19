@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/barrier_background.png-9045f49fd19cae29d04d7e1ae004e987.stex"
+path="res://.import/campfire_dark.png-21d4594cc07a2fc0df74761604dc4e65.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level/Overlay/barrier_background.png"
-dest_files=[ "res://.import/barrier_background.png-9045f49fd19cae29d04d7e1ae004e987.stex" ]
+source_file="res://Level/Overlay/assets/campfire_dark.png"
+dest_files=[ "res://.import/campfire_dark.png-21d4594cc07a2fc0df74761604dc4e65.stex" ]
 
 [params]
 
