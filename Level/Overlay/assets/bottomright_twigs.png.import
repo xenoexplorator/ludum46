@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/barrier_background.png-9045f49fd19cae29d04d7e1ae004e987.stex"
+path="res://.import/bottomright_twigs.png-4919660be5389f2a6801cb7ab3df0765.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level/Overlay/barrier_background.png"
-dest_files=[ "res://.import/barrier_background.png-9045f49fd19cae29d04d7e1ae004e987.stex" ]
+source_file="res://Level/Overlay/assets/bottomright_twigs.png"
+dest_files=[ "res://.import/bottomright_twigs.png-4919660be5389f2a6801cb7ab3df0765.stex" ]
 
 [params]
 

@@ -7,6 +7,7 @@ var max_heat = 100
 
 func _ready():
 	heat = max_heat
+	get_tree().call_group("hud", "update_campfire_health", heat)
 	emit_signal("heat_changed", heat)
 	
 func _on_Heat_body_entered(body):
@@ -21,5 +22,6 @@ func _cool_down(rain_drop):
 	if rain_drop is RainDrop:
 		heat -= 5
 		heat = max(0, heat)
+		get_tree().call_group("hud", "update_campfire_health", heat)
 		emit_signal("heat_changed", heat)
 		rain_drop.turn_to_steam()

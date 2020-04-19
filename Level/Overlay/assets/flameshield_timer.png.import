@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/barrier.png-7d4a5e7a2279aa98ee32a7280b6c5e37.stex"
+path="res://.import/flameshield_timer.png-1ca4bff272f86b3971ad2e1dd8c7b968.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level/Overlay/barrier.png"
-dest_files=[ "res://.import/barrier.png-7d4a5e7a2279aa98ee32a7280b6c5e37.stex" ]
+source_file="res://Level/Overlay/assets/flameshield_timer.png"
+dest_files=[ "res://.import/flameshield_timer.png-1ca4bff272f86b3971ad2e1dd8c7b968.stex" ]
 
 [params]
 

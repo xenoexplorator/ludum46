@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sablier.png-de1ea65ce2d704bd41c6757b8917d244.stex"
+path="res://.import/bottomleft_twigs.png-df796dcb51601176c11ecbb1dafc69a8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level/Overlay/sablier.png"
-dest_files=[ "res://.import/sablier.png-de1ea65ce2d704bd41c6757b8917d244.stex" ]
+source_file="res://Level/Overlay/assets/bottomleft_twigs.png"
+dest_files=[ "res://.import/bottomleft_twigs.png-df796dcb51601176c11ecbb1dafc69a8.stex" ]
 
 [params]
 

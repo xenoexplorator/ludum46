@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bottomleft_twigs.png-f249cdab75b7b0af6dcbd75c0a4d7903.stex"
+path="res://.import/campfire.png-f42428369999cbb42208dea018c94840.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level/Overlay/bottomleft_twigs.png"
-dest_files=[ "res://.import/bottomleft_twigs.png-f249cdab75b7b0af6dcbd75c0a4d7903.stex" ]
+source_file="res://Level/Overlay/assets/campfire.png"
+dest_files=[ "res://.import/campfire.png-f42428369999cbb42208dea018c94840.stex" ]
 
 [params]
 
