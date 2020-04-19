@@ -19,11 +19,9 @@ func _on_screen_exited() -> void:
 func _on_body_entered(body: Node) -> void:
 	if body is Player:
 		body.hurt()
-		turn_to_steam()
 	elif body is Campfire:
-		body.take_rain(self)
-	else:
-		queue_free()
+		body.cool_down(self)
+	turn_to_steam()
 
 func turn_to_steam():
 	set_deferred("monitoring", false)
