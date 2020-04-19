@@ -27,6 +27,7 @@ __meta__ = {
 [node name="HUD" parent="TextureRect" instance=ExtResource( 6 )]
 
 [node name="Storm" parent="." instance=ExtResource( 7 )]
+campfire = NodePath("../Campfire")
 
 [node name="Campfire" parent="." instance=ExtResource( 3 )]
 position = Vector2( 518.116, 452.238 )
@@ -39,7 +40,7 @@ position = Vector2( 649.813, 413.517 )
 [node name="Boundaries" parent="." instance=ExtResource( 5 )]
 
 [node name="Updraft" type="Area2D" parent="."]
-position = Vector2( 625, 350 )
+position = Vector2( 645, 350 )
 space_override = 1
 gravity_vec = Vector2( 0, -1.5 )
 collision_layer = 0
