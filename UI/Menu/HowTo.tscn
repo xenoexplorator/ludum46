@@ -40,18 +40,28 @@ margin_right = 1090.0
 margin_bottom = 539.0
 size_flags_vertical = 3
 custom_fonts/normal_font = ExtResource( 2 )
-custom_colors/default_color = Color( 0.694118, 0.419608, 0.419608, 1 )
+custom_colors/default_color = Color( 0.00392157, 0.0588235, 0.0352941, 1 )
 bbcode_enabled = true
-bbcode_text = "Welcome, sprite! Your job is to protect the [tornado][color=red]flame of the campfire[/color][/tornado] from all that nasty [shake][color=blue]rain[/color][/shake] that's been falling lately.
+bbcode_text = "Welcome, sprite! 
+Your job is to protect the  [tornado][color=#FF6000]campfire flame[/color][/tornado]  from all that nasty [shake][color=#197CB0]rain[/color][/shake] that's been falling lately.
 
-Use the arrow keys or WASD to move around and stop as many raindrops as you can.
+Use the arrow keys or WASD to move around and stop as many raindrops as you can to prevent the rain from wetting the logs. The longer the flame strives, the better!
 
-You can also use flame barriers to protect those logs. try pressing the space bar to summon them."
-text = "Welcome, sprite! Your job is to protect the flame of the campfire from all that nasty rain that's been falling lately.
+But, stopping the raindrops hurts you. You can however regain your health by being near or in the fire.
 
-Use the arrow keys or WASD to move around and stop as many raindrops as you can.
+You can also use flame shields to protect those logs. Try pressing the space bar to summon them. Beware, you'll need to wait while the next shield heats up.
 
-You can also use flame barriers to protect those logs. try pressing the space bar to summon them."
+Brighten up little raincatcher, sunny days are bound to be back!"
+text = "Welcome, sprite! 
+Your job is to protect the  campfire flame  from all that nasty rain that's been falling lately.
+
+Use the arrow keys or WASD to move around and stop as many raindrops as you can to prevent the rain from wetting the logs. The longer the flame strives, the better!
+
+But, stopping the raindrops hurts you. You can however regain your health by being near or in the fire.
+
+You can also use flame shields to protect those logs. Try pressing the space bar to summon them. Beware, you'll need to wait while the next shield heats up.
+
+Brighten up little raincatcher, sunny days are bound to be back!"
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 margin_top = 543.0
