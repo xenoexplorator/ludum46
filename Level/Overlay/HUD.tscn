@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://UI/fonts/PopupText.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Level/Overlay/sablier.png" type="Texture" id=2]
-[ext_resource path="res://Level/overlay.png" type="Texture" id=3]
 [ext_resource path="res://Level/Overlay/Timer.gd" type="Script" id=4]
 [ext_resource path="res://Level/Overlay/BarrierUse.gd" type="Script" id=5]
 [ext_resource path="res://Level/Overlay/barrier_background.png" type="Texture" id=6]
@@ -32,9 +31,13 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-texture = ExtResource( 3 )
+margin_left = 6.5072
+margin_top = 3.25354
+margin_right = 1286.51
+margin_bottom = 783.254
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="LeftBox" type="MarginContainer" parent="."]
 anchor_right = 1.0
