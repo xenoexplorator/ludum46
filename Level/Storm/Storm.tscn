@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Level/Storm/Storm.gd" type="Script" id=1]
 [ext_resource path="res://Level/Storm/StormEvents/SpawnArc.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Level/Storm/StormEvents/SpawnLog.gd" type="Script" id=4]
 [ext_resource path="res://Level/Storm/StormEvents/SpawnCurtain.gd" type="Script" id=5]
 [ext_resource path="res://Level/Storm/StormEvents/ToggleRandom.gd" type="Script" id=6]
+[ext_resource path="res://Level/Storm/StormEvents/SpawnBox.gd" type="Script" id=7]
 
 [node name="Storm" type="Node2D" groups=[
 "storm",
@@ -56,5 +57,16 @@ angle = -30.0
 [node name="ToggleRandom" type="Node" parent="EventsContainer"]
 script = ExtResource( 6 )
 timing = 2.0
+
+[node name="SpawnBox" type="Node" parent="EventsContainer"]
+script = ExtResource( 7 )
+timing = 2.0
+repeating = true
+repeatTimer = 1.0
+spawn_box = Rect2( 80, 40, 1120, 20 )
+angle_min = -30.0
+angle_max = -30.0
+speed_min = 90.0
+speed_max = 160.0
 
 [node name="DropsContainer" type="Node2D" parent="."]
