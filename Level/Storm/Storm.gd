@@ -5,6 +5,7 @@ extends Node2D
 const SPAWN_THRESHOLD := 10.0
 const LogPickup = preload("res://LogPickup/LogPickup.tscn")
 const RainDrop = preload("res://Rain/RainDrop.tscn")
+export (NodePath) var campfire
 export (float) var timer := 0.0
 export (float) var spawn_rate := 10.0
 var spawn_randoms := true
@@ -19,6 +20,7 @@ var storm_events := [
 
 func _ready() -> void:
 	randomize()
+	campfire = get_node(campfire)
 
 func _process(delta: float) -> void:
 	timer += delta
@@ -99,5 +101,5 @@ func spawn_log() -> void:
 	var x = rand_range(80, 1200)
 	var y = rand_range(80, 700)
 	pickup.position = Vector2(x, y)
-	# TODO connecter le signal
+	pickup.connect("picked_up", campfire, "add_log")
 	add_child(pickup)
