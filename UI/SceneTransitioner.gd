@@ -8,6 +8,11 @@ func transition_to_scene(scene : PackedScene):
 		currentTransition = Scene_Transition.new(scene)
 		commit_transition()
 
+func transition_with_path(path : String):
+	if not transitioning:
+		currentTransition = PathSceneTransition.new(path)
+		commit_transition()
+
 func transition_to_quit():
 	if not transitioning:
 		currentTransition = Exit_Transition.new()
