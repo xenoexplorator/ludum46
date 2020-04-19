@@ -174,10 +174,8 @@ __meta__ = {
 }
 
 [node name="HowTo" parent="." instance=ExtResource( 3 )]
-visible = false
 
 [node name="Credits" parent="." instance=ExtResource( 5 )]
-visible = false
 [connection signal="pressed" from="MarginContainer/Buttons/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="MarginContainer/Buttons/HowTo" to="." method="_on_HowTo_pressed"]
 [connection signal="pressed" from="MarginContainer/Buttons/Credits" to="." method="_on_Credits_pressed"]
