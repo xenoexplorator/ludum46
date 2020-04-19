@@ -13,5 +13,6 @@ func _on_area_entered(area: Area2D) -> void:
 
 func _on_body_entered(body: Node) -> void:
 	if body is Player:
-		emit_signal("picked_up", value)
-		queue_free()
+		if not body.needs_heat:
+			emit_signal("picked_up", value)
+			queue_free()

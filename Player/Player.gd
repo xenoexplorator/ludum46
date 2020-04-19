@@ -11,6 +11,7 @@ const MaskNoWater = 15
 const MaskWithWater = 31
 
 var is_in_heat : bool = false
+var needs_heat = false
 
 signal barrier_created(position, target)
 
@@ -24,23 +25,38 @@ func _physics_process(delta):
 	apply_central_impulse(thrust)
 	
 	#Spawn Barrier
-	if Input.is_action_just_pressed("spawn_barrier"):
+	if Input.is_action_just_pressed("spawn_barrier") && not needs_heat:
 		$BarrierSkill.use_skill()
+		if $HeatGauge.value == 0:
+			enter_spirit_mode()
 	
 	if is_in_heat:
 		$HeatGauge.value += (100/HealingSpeed) * delta
-		collision_mask = MaskWithWater
-		set_alpha()
+		if $HeatGauge.value > 30:
+			leave_spirit_mode()
 
 func hurt():
-	$HeatGauge.value -= DamagePerDroplet
-	set_alpha()
-	if $HeatGauge.value == 0:
-		collision_mask = MaskNoWater
+	spend_fuel(DamagePerDroplet)
 
-func set_alpha():
-	var alpha = (0.8 * ($HeatGauge.value/100)) + 0.2
-	$Sprite.modulate = Color(1, 1, 1, alpha)
+func spend_fuel(cost : float):
+	$HeatGauge.value -= cost
+	if $HeatGauge.value == 0:
+		enter_spirit_mode()
+
+
+func enter_spirit_mode():
+	needs_heat = true
+	collision_mask = MaskNoWater
+	set_alpha(0.2)
+
+
+func leave_spirit_mode():
+	needs_heat = false
+	collision_mask = MaskWithWater
+	set_alpha(1)
+
+func set_alpha(value):
+	$Sprite.modulate = Color(1, 1, 1, value)
 
 func get_inputs() -> Vector2:
 	var dir : Vector2
