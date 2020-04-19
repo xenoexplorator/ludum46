@@ -8,4 +8,4 @@ func _ready() -> void:
 
 
 func _on_HeatMonitoring_fire_extinguished():
-	SceneTransitioner.transition_with_path(MainMenu)
+	SceneTransitioner.go_to(MainMenu)

@@ -20,6 +20,11 @@ _global_script_classes=[ {
 "path": "res://UI/transitioners/exit_transition.gd"
 }, {
 "base": "Transition",
+"class": "NullTransition",
+"language": "GDScript",
+"path": "res://UI/transitioners/NullTransition.gd"
+}, {
+"base": "Transition",
 "class": "PathSceneTransition",
 "language": "GDScript",
 "path": "res://UI/transitioners/path_scene_transition.gd"
@@ -48,16 +53,23 @@ _global_script_classes=[ {
 "class": "Transition",
 "language": "GDScript",
 "path": "res://UI/transitioners/transition.gd"
+}, {
+"base": "Node",
+"class": "transition_factory",
+"language": "GDScript",
+"path": "res://UI/transitioners/transition_factory.gd"
 } ]
 _global_script_class_icons={
 "Campfire": "",
 "Exit_Transition": "",
+"NullTransition": "",
 "PathSceneTransition": "",
 "Player": "",
 "RainDrop": "",
 "Scene_Transition": "",
 "StormEvent": "",
-"Transition": ""
+"Transition": "",
+"transition_factory": ""
 }
 
 [application]

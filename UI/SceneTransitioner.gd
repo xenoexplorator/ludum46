@@ -2,20 +2,14 @@ extends CanvasLayer
 
 var transitioning : bool = false
 var currentTransition : Transition
+var factory : transition_factory
 
-func transition_to_scene(scene : PackedScene):
-	if not transitioning:
-		currentTransition = Scene_Transition.new(scene)
-		commit_transition()
+func _init():
+	factory = transition_factory.new()
 
-func transition_with_path(path : String):
+func go_to(input):
 	if not transitioning:
-		currentTransition = PathSceneTransition.new(path)
-		commit_transition()
-
-func transition_to_quit():
-	if not transitioning:
-		currentTransition = Exit_Transition.new()
+		currentTransition = factory.CreateTransitionFor(input)
 		commit_transition()
 
 func commit_transition():
