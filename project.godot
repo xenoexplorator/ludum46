@@ -116,7 +116,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Ludum 46"
+config/name="Raincatcher"
 run/main_scene="res://UI/Menu/MainMenu.tscn"
 config/icon="res://icon.png"
 
