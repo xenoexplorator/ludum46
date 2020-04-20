@@ -46,12 +46,10 @@ repeatTimer = 30.0
 [node name="SpawnCurtain" type="Node" parent="EventsContainer"]
 script = ExtResource( 5 )
 timing = 5.0
-repeating = true
-repeatTimer = 0.2
-repeat_count = 12
 origin = Vector2( 1200, 40 )
 drift = Vector2( -30, 12 )
-count = 6
+count = 12
+spawn_delay = 0.2
 bidirectional = true
 angle = -30.0
 
@@ -98,24 +96,20 @@ new_rate = 80.0
 [node name="SpawnCurtain2" type="Node" parent="EventsContainer"]
 script = ExtResource( 5 )
 timing = 9.0
-repeating = true
-repeatTimer = 0.2
-repeat_count = 6
 origin = Vector2( 45, 195 )
 drift = Vector2( 30, -30 )
 count = 6
+spawn_delay = 0.2
 angle = 45.0
 speed = 130.0
 
 [node name="SpawnCurtain3" type="Node" parent="EventsContainer"]
 script = ExtResource( 5 )
 timing = 11.0
-repeating = true
-repeatTimer = 0.2
-repeat_count = 6
 origin = Vector2( 1135, 195 )
 drift = Vector2( -30, -30 )
 count = 6
+spawn_delay = 0.2
 angle = -45.0
 speed = 130.0
 
