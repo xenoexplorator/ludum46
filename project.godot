@@ -123,6 +123,7 @@ config/icon="res://icon.png"
 [autoload]
 
 SceneTransitioner="*res://UI/SceneTransitioner.tscn"
+Score="*res://UI/Menu/Score.gd"
 
 [display]
 

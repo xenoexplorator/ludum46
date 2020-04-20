@@ -16,7 +16,8 @@ func cool_down(rain_drop):
 	update_heat(-5)
 	rain_drop.turn_to_steam()
 	if heat == 0:
-		SceneTransitioner.go_to("res://UI/Menu/MainMenu.tscn")
+		get_tree().call_group("hud", "game_end")
+		SceneTransitioner.go_to("res://UI/Menu/EndScreen.tscn")
 
 
 func add_log(amount: float) -> void:
