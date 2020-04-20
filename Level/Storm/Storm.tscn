@@ -19,32 +19,36 @@ script = ExtResource( 1 )
 [node name="SpawnArc" type="Node" parent="EventsContainer"]
 script = ExtResource( 2 )
 timing = 20.0
+repeating = true
+repeatTimer = 20.0
 origin = Vector2( 50, 30 )
 start_angle = -20.0
 end_angle = 60.0
 num_drops = 8
-num_waves = 20
-spawn_delay = 0.3
 speed = 120.0
 
 [node name="SpawnCluster" type="Node" parent="EventsContainer"]
 script = ExtResource( 3 )
 timing = 15.0
+repeating = true
+repeatTimer = 15.0
 origin = Vector2( 560, 60 )
-angle = -10.0
+angle = 5.0
 num_drops = 10
 radius = 50.0
 speed = 100.0
 
 [node name="SpawnLog" type="Node" parent="EventsContainer"]
 script = ExtResource( 4 )
-timing = 30.0
+timing = 15.0
 repeating = true
-repeatTimer = 30.0
+repeatTimer = 15.0
 
 [node name="SpawnCurtain" type="Node" parent="EventsContainer"]
 script = ExtResource( 5 )
 timing = 5.0
+repeating = true
+repeatTimer = 5.0
 origin = Vector2( 1200, 40 )
 drift = Vector2( -30, 12 )
 count = 12
@@ -95,6 +99,8 @@ new_rate = 80.0
 [node name="SpawnCurtain2" type="Node" parent="EventsContainer"]
 script = ExtResource( 5 )
 timing = 9.0
+repeating = true
+repeatTimer = 9.0
 origin = Vector2( 45, 195 )
 drift = Vector2( 30, -30 )
 count = 6
@@ -105,6 +111,8 @@ speed = 130.0
 [node name="SpawnCurtain3" type="Node" parent="EventsContainer"]
 script = ExtResource( 5 )
 timing = 11.0
+repeating = true
+repeatTimer = 11.0
 origin = Vector2( 1135, 195 )
 drift = Vector2( -30, -30 )
 count = 6

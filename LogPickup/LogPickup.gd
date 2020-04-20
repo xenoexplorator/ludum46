@@ -1,12 +1,12 @@
 extends Area2D
 
 signal picked_up(value)
-export (int) var value := 20
+export (int) var value := 25
 
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is RainDrop:
-		value -= 2
+		value -= 3
 		if value <= 0:
 			queue_free()
 
