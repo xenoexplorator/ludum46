@@ -17,8 +17,9 @@ var base_timing
 func _ready() -> void:
 	base_timing = timing
 
+
 func get_ray_number() -> int:
-	var index = spawn_index % count
+	var index = spawn_index
 	if bidirectional and index > count / 2:
 		index = count - index
 	return index
@@ -38,6 +39,7 @@ func _update_after_run():
 	elif repeating and repeat_count != 0:
 		base_timing += repeatTimer
 		timing = base_timing
+		spawn_index = 0
 		if repeat_count > 0:
 			repeat_count -= 1
 	else:
