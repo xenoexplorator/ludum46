@@ -95,4 +95,28 @@ script = ExtResource( 8 )
 timing = 90.0
 new_rate = 80.0
 
+[node name="SpawnCurtain2" type="Node" parent="EventsContainer"]
+script = ExtResource( 5 )
+timing = 9.0
+repeating = true
+repeatTimer = 0.2
+repeat_count = 6
+origin = Vector2( 45, 195 )
+drift = Vector2( 30, -30 )
+count = 6
+angle = 45.0
+speed = 130.0
+
+[node name="SpawnCurtain3" type="Node" parent="EventsContainer"]
+script = ExtResource( 5 )
+timing = 11.0
+repeating = true
+repeatTimer = 0.2
+repeat_count = 6
+origin = Vector2( 1135, 195 )
+drift = Vector2( -30, -30 )
+count = 6
+angle = -45.0
+speed = 130.0
+
 [node name="DropsContainer" type="Node2D" parent="."]
